@@ -1,17 +1,8 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import "github.com/ogarridojimenez/go-swagger-gin/router"
 
 func main() {
-	//inicializa una ruta utilizando la configuración por defecto de gin
-	router := gin.Default()
-
-	//definiendo una ruta
-	router.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
-	// Estamos corriendo a nuestra api
-	router.Run(":8080") // listen and serve on 0.0.0.0:8080
+	// inicializa router
+	router.Initialice()
 }
